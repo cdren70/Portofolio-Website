@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Webpage</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav class="navbar">
+        <img class="logo" src="images/Teks paragraf Andas.png" alt="logo">
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fas fa-times"onclick="closemenu()"></i>
+        </ul>
+        <i id="menu1" class="fas fa-bars"onclick="openmenu()" ></i>
+      </nav>
+      <div class="header-text" >
+        <p>Front End Developer</p>
+        <h1>Hi, I'm <span>Andre </span><br>Christian Napitupulu</h1><br>
+        <p class="jurusan">Bachelor of <br><span class="jurusan-1">Telecommunications Engineering</span>  <br>Telkom University.</p>
+      </div>
+    </div>
+  </div>
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/1689593132643 (1).jpg">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title1">About Me</h1>
+          <p align="justify" class="about-me">Hello there! I'm Andre Christian Napitupulu, a driven and forward-thinking Telecommunications Engineering student at Telkom University with a profound interest in the captivating realms of Web Development, Games, and Technology.As an aspiring Web Developer, I find joy in crafting digital experiences that are not only visually appealing but also user-friendly and functional. My journey in the world of technology has been nothing short of exciting, and I am enthusiastic about the limitless possibilities that lie ahead.</p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links"onclick="opentab('experience')">Sertificate</p>
+            <p class="tab-links"onclick="opentab('education')">Education</p>
+            <p class="tab-links"onclick="opentab('Project')">Projects</p>
+          </div>
+          <div class="tab-contents active-tab"id="skills">
+            <ul>
+              <li><span>Web Development</span><br> HTML, CSS, dan JavaScript.</li>
+              <li><span>App Development</span><br> MIT App Inventor.</li>
+              <li><span>Game Maker</span><br>
+                Game Maker Studio.</li>
+            </ul>
+          </div>
+          <div class="tab-contents"id="experience">
+            <ul>
+              <li><span><a href="https://www.freecodecamp.org/certification/eanx/responsive-web-design">Responsive Web Design</a></span><br> Free Code Camp </li>
+              <li><span><a href="https://www.dicoding.com/certificates/4EXGNOGKDZRL">Basic Structured Query Language (SQL)</a></span><br> Dicoding Indonesia</li>
+              <li><span><a href="https://www.dicoding.com/certificates/L4PQGY05OZO1">Basic JavaScript Programming</a></span><br> Dicoding Indonesia</li>
+              <li><span><a href="https://www.coursera.org/account/accomplishments/certificate/TUYNF7EGYBM9">Introduction to Front-End Development</a></span><br>Coursera</li>
+              <li><span><a href="https://www.coursera.org/account/accomplishments/certificate/SCQL8QYTN35N">Programming with JavaScript</a></span><br>Coursera</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>Sekolah Dasar</span><br><abbrv title="Sekolah Dasar">SD</abbrv> Budi Mulia 2</li>
+              <li><span>Sekolah Menengah Pertama</span><br><abbrv title="Sekolah Menengah Pertama">SMP</abbrv> Bintang Timur</li>
+              <li><span>Sekolah Menengah Atas</span><br><abbrv title="Sekolah Menengah Atas">SMA</abbrv> Kalam Kudus</li>
+              <li><span>Universitas</span><br> Telkom University</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="Project">
+            <ul>
+            <span>
+              <li><span>Web Development</span><br>  Portofolio Website, Product Landing Page</li>
+              <li><span>App Development</span><br> Kalkulator, Quiz App , Konversi Suhu</li>
+              <li><span>Game Maker</span><br>Scrolling Shooter Game</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Contact -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title1-contact">Contact Me</h1>
+          <p class="contact-2"><i class="fa-sharp fa-regular fa-paper-plane"></i>            andrechristian995@gmail.com</p>
+          <p class="contact-2"><i class="fa-solid fa-phone"></i>0895343239254</p>
+          <div class="social-icons">
+              <a href="https://www.instagram.com/cdren70/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://github.com/cdren70"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/andre-christian-napitupulu-750551226/"><i class="fa-brands fa-linkedin"></i></a><a href="mailto:andrechristian995@gmail.com?subject=Hello%20from%20My%20Portfolio&body=Dear%20Recipient,%0D%0A%0D%0AI%20am%20reaching%20out%20to%20you%20regarding%20..."><i class="fa-sharp fa-solid fa-inbox"></i></a>
+          </div>
+        </div>
+        <div class="contact-right">
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright @ Andre Christian Napitupulu</p>
+    </div>
+  </div>
+
+
+  <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      } 
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link"); 
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+
+  <script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+    function closemenu(){
+      sidemenu.style.right = "-200px";
+    }
+
+  </script>
+</body>
+</html>
